@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3973789753977069528}
   - component: {fileID: -1123812756341352544}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sewer Hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3973789753977069528
 Transform:
@@ -58,12 +58,12 @@ GameObject:
   - component: {fileID: 690683096948310034}
   - component: {fileID: 6476927917978791529}
   - component: {fileID: 5638260434142654770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sewer_hatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &690683096948310034
 Transform:

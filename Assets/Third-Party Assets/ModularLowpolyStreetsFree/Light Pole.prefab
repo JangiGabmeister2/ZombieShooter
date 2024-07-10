@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 1153572496911268810}
   - component: {fileID: 7201743844041731934}
   - component: {fileID: 5862790242361448886}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pole_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1153572496911268810
 Transform:
@@ -94,12 +94,12 @@ GameObject:
   - component: {fileID: 5317237136029937452}
   - component: {fileID: 1956484100553234684}
   - component: {fileID: 650595567601311719}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pole_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5317237136029937452
 Transform:
@@ -175,12 +175,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5845243324663546485}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light Pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5845243324663546485
 Transform:
@@ -211,12 +211,12 @@ GameObject:
   - component: {fileID: 7684256420290729823}
   - component: {fileID: 8225616476401597972}
   - component: {fileID: 1082818135162042612}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pole_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7684256420290729823
 Transform:

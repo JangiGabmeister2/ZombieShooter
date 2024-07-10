@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 2357891704644426903}
   - component: {fileID: 4442872976710124497}
   - component: {fileID: 1767858828581747864}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cafe Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2357891704644426903
 Transform:

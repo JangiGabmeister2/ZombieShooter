@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 2513668544742949295}
   - component: {fileID: 7539504386834855691}
   - component: {fileID: 8559905288541959057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Traffic Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2513668544742949295
 Transform:

@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 8645435537223909643}
   - component: {fileID: 8565592858354178228}
   - component: {fileID: 6917653334907348296}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tree_area_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8645435537223909643
 Transform:
@@ -94,12 +94,12 @@ GameObject:
   - component: {fileID: 1764616287849410088}
   - component: {fileID: 217220870182455212}
   - component: {fileID: 7636811672231696483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tree_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1764616287849410088
 Transform:
@@ -175,12 +175,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7053328144685173680}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tree Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7053328144685173680
 Transform:

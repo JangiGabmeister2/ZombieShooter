@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5169884538070711623}
   - component: {fileID: 5323254722711521230}
   - component: {fileID: 4974554642864941040}
-  - component: {fileID: -2663610598161615905}
+  - component: {fileID: 2734519422969997925}
   m_Layer: 0
   m_Name: Pavement
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6609578344109592121}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 49.490868, y: 0.72, z: -69.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-2663610598161615905
-MeshCollider:
+--- !u!65 &2734519422969997925
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5321260103611251441, guid: 8f631a0560592c44890f879375e84e52, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 17.5, y: 0, z: 17.5}
+  m_Center: {x: -8.75, y: 0, z: 8.75}
