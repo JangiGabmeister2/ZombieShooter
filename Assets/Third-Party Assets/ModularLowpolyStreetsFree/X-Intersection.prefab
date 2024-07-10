@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3549223154018850164}
   - component: {fileID: 8878278277004461613}
   - component: {fileID: 4913841299736043770}
+  - component: {fileID: -3349417739783344728}
   m_Layer: 0
   m_Name: X-Intersection
   m_TagString: Untagged
@@ -85,3 +86,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3349417739783344728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648886965094928976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2520092161144172093, guid: 8f631a0560592c44890f879375e84e52, type: 3}
