@@ -6,6 +6,7 @@ public enum ZombieState
     Follow = 1,
     Death = 2,
 }
+
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(Animator))]

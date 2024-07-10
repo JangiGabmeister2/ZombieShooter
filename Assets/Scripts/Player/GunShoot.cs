@@ -17,6 +17,7 @@ public class GunShoot : MonoBehaviour
     private void Start()
     {
         _lr.enabled = false;
+        _lr.useWorldSpace = true;
     }
 
     private void Update()
@@ -50,7 +51,7 @@ public class GunShoot : MonoBehaviour
         _lr.SetPosition(0, gunTip.position);
         _lr.SetPosition(1, _mousePosition);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
 
         _lr.enabled = false;
     }
