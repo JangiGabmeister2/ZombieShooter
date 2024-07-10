@@ -14,6 +14,9 @@ public class PlayerAimRotation : MonoBehaviour
             _mousePosition = rayHit.point;
         }
 
-        transform.LookAt(_mousePosition);
+        if (Vector3.Distance(transform.position, _mousePosition) > 2f)
+        {
+            transform.LookAt(_mousePosition);
+        }
     }
 }
