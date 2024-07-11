@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 3
   _searchRadius: 30
-  _moveSpeed: 2
+  _moveSpeed: 0.5
 --- !u!114 &6179951400069810686
 MonoBehaviour:
   m_ObjectHideFlags: 0

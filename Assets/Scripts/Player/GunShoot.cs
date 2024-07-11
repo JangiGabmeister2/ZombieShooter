@@ -10,7 +10,10 @@ public class GunShoot : MonoBehaviour
 
     public bool isGunHolstered = true;
 
+    [SerializeField] private float _shotCooldown = .5f;
+
     private Vector3 _mousePosition = Vector3.zero;
+    private float _shootCooldown;
 
     LineRenderer _lr => GetComponent<LineRenderer>();
 
@@ -30,9 +33,11 @@ public class GunShoot : MonoBehaviour
             isGunHolstered = !isGunHolstered;
         }
 
+        _shootCooldown -= Time.deltaTime;
+
         if (!isGunHolstered)
         {
-            if (Input.GetKeyDown(shootKey))
+            if (Input.GetKeyDown(shootKey) && _shootCooldown <= 0)
             {
                 if (Physics.Raycast(ray, out rayHit))
                 {
@@ -40,6 +45,8 @@ public class GunShoot : MonoBehaviour
                 }
 
                 StartCoroutine("Shoot");
+
+                _shootCooldown = _shotCooldown;
             }
         }
     }
@@ -51,8 +58,20 @@ public class GunShoot : MonoBehaviour
         _lr.SetPosition(0, gunTip.position);
         _lr.SetPosition(1, _mousePosition);
 
+        PlayGunShotSound();
+
         yield return new WaitForSeconds(0.1f);
 
         _lr.enabled = false;
+    }
+
+    private void PlayGunShotSound()
+    {
+        AudioClip[] shots = new AudioClip[] {
+            SoundMaster.Instance.GetSoundClip("Gun Shot 1"),
+            SoundMaster.Instance.GetSoundClip("Gun Shot 2"),
+            SoundMaster.Instance.GetSoundClip("Gun Shot 3")};
+
+        SoundMaster.Instance.PlaySFX(shots[Random.Range(0, shots.Length)]);
     }
 }

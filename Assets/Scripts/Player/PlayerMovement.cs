@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public KeyCode runKey = KeyCode.LeftShift;
 
+    [SerializeField] AudioSource walkingSFX;
+
     private MovementSpeed _mSpeed;
 
     private float _walkSpeed = 5f, _runSpeed = 10f, _moveSpeed = 0f;
@@ -17,11 +19,22 @@ public class PlayerMovement : MonoBehaviour
     private float Vertical => Input.GetAxis("Vertical");
     private float Horiontal => Input.GetAxis("Horizontal");
 
+    private void Start()
+    {
+        walkingSFX.enabled = false;
+    }
+
     private void Update()
     {
         if (Vertical > 0)
         {
             transform.position += transform.forward * _moveSpeed * Time.deltaTime;
+
+            walkingSFX.enabled = true;
+        }
+        else
+        {
+            walkingSFX.enabled = false;
         }
 
         if (Horiontal < 0)
@@ -33,31 +46,28 @@ public class PlayerMovement : MonoBehaviour
             transform.position += transform.right * _moveSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKey(runKey))
-        {
-            SwitchMoveSpeed(true);
-        }
-        else
-        {
-            SwitchMoveSpeed(false);
-        }
+        SwitchMoveSpeed();
     }
 
-    private void SwitchMoveSpeed(bool isRunning)
+    private void SwitchMoveSpeed()
     {
+        _mSpeed = Input.GetKey(runKey) ? MovementSpeed.Running : MovementSpeed.Walking;
+
         switch (_mSpeed)
         {
             case MovementSpeed.Walking:
 
                 _moveSpeed = _walkSpeed;
 
-                if (isRunning) _mSpeed = MovementSpeed.Running;
+                walkingSFX.pitch = 2;
+
                 break;
             case MovementSpeed.Running:
 
                 _moveSpeed = _runSpeed;
 
-                if (!isRunning) _mSpeed = MovementSpeed.Walking;
+                walkingSFX.pitch = 4;
+
                 break;
             default:
                 break;
