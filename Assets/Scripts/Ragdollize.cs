@@ -11,7 +11,7 @@ public class Ragdollize : MonoBehaviour
     [SerializeField] private Collider _sphere;
     [SerializeField] private Rigidbody _rb;
 
-    [SerializeField] private bool _makeRagdoll = false;
+    public bool makeRagdoll = false;
 
     public UnityEvent RagdollEvent;
     
@@ -51,7 +51,7 @@ public class Ragdollize : MonoBehaviour
 
     private void Update()
     {
-        if (_makeRagdoll) StartCoroutine(nameof(Ragdoll));
+        if (makeRagdoll) StartCoroutine(nameof(Ragdoll));
     }
 
     private IEnumerator Ragdoll()

@@ -5,12 +5,12 @@ using UnityEngine;
 public class GunShoot : MonoBehaviour
 {
     public KeyCode shootKey = KeyCode.Mouse0;
-
+    public GameObject bullet;
     public Transform gunTip;
 
-    public bool isGunHolstered = true;
-
     [SerializeField] private float _shotCooldown = .5f;
+
+    public bool isGunHolstered = true;
 
     private Vector3 _mousePosition = Vector3.zero;
     private float _shootCooldown;
@@ -58,11 +58,15 @@ public class GunShoot : MonoBehaviour
         _lr.SetPosition(0, gunTip.position);
         _lr.SetPosition(1, _mousePosition);
 
+        GameObject newBullet = Instantiate(bullet, gunTip.position, Quaternion.identity);
+        newBullet.transform.position += newBullet.transform.up * 20f * Time.deltaTime;
+
         PlayGunShotSound();
 
         yield return new WaitForSeconds(0.1f);
 
         _lr.enabled = false;
+        Destroy(newBullet, 10f);
     }
 
     private void PlayGunShotSound()

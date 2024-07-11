@@ -59,14 +59,14 @@ public class PlayerMovement : MonoBehaviour
 
                 _moveSpeed = _walkSpeed;
 
-                walkingSFX.pitch = 2;
+                walkingSFX.pitch = 1;
 
                 break;
             case MovementSpeed.Running:
 
                 _moveSpeed = _runSpeed;
 
-                walkingSFX.pitch = 4;
+                walkingSFX.pitch = 1.5f;
 
                 break;
             default:

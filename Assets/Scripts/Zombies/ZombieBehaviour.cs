@@ -10,6 +10,7 @@ public enum ZombieState
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Ragdollize))]
 public class ZombieBehaviour : MonoBehaviour
 {
     //zombie health
@@ -25,6 +26,8 @@ public class ZombieBehaviour : MonoBehaviour
     private Animator _zombieAnimator;
     //reference to the zombie's search collider
     private SphereCollider _searchCollider;
+    //reference to script that ragdolls the zombie on death
+    private Ragdollize _ragdoll;
     //reference to the player transform
     private Transform _player;
 
@@ -33,6 +36,7 @@ public class ZombieBehaviour : MonoBehaviour
     private void Start()
     {
         _zombieAnimator = GetComponent<Animator>();
+        _ragdoll = GetComponent<Ragdollize>();
 
         _searchCollider = GetComponent<SphereCollider>();
         _searchCollider.radius = _searchRadius;
@@ -111,7 +115,7 @@ public class ZombieBehaviour : MonoBehaviour
         //play animation for death
         //but for not just disappear after a few secs
 
-        Destroy(gameObject, 2f);
+        _ragdoll.makeRagdoll = true;
     }
     #endregion
 
